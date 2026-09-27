@@ -1,6 +1,6 @@
 # Superstore Sales Analysis with SQL
 
-An internship SQL project by **Balram Kumar**, completed during the Data Analyst internship at Renu Sharma Healthcare and Educational Foundation (24 August–24 September 2026).
+I completed this SQL project during my Data Analyst internship at Renu Sharma Healthcare and Educational Foundation (24 August–24 September 2026).
 
 ## Questions
 1. Which five customers have the highest total sales?
@@ -9,11 +9,13 @@ An internship SQL project by **Balram Kumar**, completed during the Data Analyst
 4. Which three categories generate the most profit?
 5. Which shipping mode is associated with the most distinct orders?
 
-## Files and provenance
+## Project files
 - `original/task_2_submission.sql`: unchanged internship submission.
-- `analysis.sql`: revised portfolio version, prepared with AI assistance after the internship. It aligns table names, calculates average order value at order level, ranks categories by profit, and distinguishes orders from line items.
+- `analysis.sql`: revised portfolio version with updates made after the internship. It aligns table names, calculates average order value at order level, ranks categories by profit, and distinguishes orders from line items.
 
 The original script's category query ranks sales, despite its profit heading. Its average uses sales rows rather than aggregated orders, and its shipping count counts rows. The revised script documents and corrects these definitions; original results should not be presented as results of the revised queries.
+
+[View my original query screenshots and results](SCREENSHOTS.md).
 
 ## Run locally
 Use PostgreSQL and pgAdmin. Execute the table definition in `analysis.sql`, then import the original Superstore CSV into `superstore_sales` with a header and the same 18-column order as the table. Run the five analysis queries afterward. Use a new project database to avoid conflicts with existing tables.
@@ -24,4 +26,4 @@ Use PostgreSQL and pgAdmin. Execute the table definition in `analysis.sql`, then
 Sales and profit are line-level amounts; an order may have several lines. Average order value excludes null order identifiers. Shipping counts distinct order identifiers within each mode; an order split across modes can appear in multiple groups. No shipment identifier exists, so these are not shipment counts. Do not infer a currency without the dataset documentation.
 
 ## Skills demonstrated
-SQL aggregation, `GROUP BY`, sorting, `LIMIT`, common table expressions, and business metric definitions. This project does not establish professional SQL employment experience.
+SQL aggregation, `GROUP BY`, sorting, `LIMIT`, common table expressions, and business metric definitions.
